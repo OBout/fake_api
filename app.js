@@ -15,7 +15,7 @@ app.use(express.json());
 app.get("/download-srt", async (req, res) => {
   // console.log(req.body);
   try {
-    const data = {"status": "success", "content": "1\n00:00:00,200 --> 00:00:05,839\nWhat kind of car you drive anyway? It's an A-Lexus, 430 L. That's like a Toyota.\n\n2\n00:00:07,319 --> 00:00:09,019\nIt's a Lexus.\n\n"};
+    const data = {"status": "success", "srt_content": "1\n00:00:00,200 --> 00:00:05,839\nWhat kind of car you drive anyway? It's an A-Lexus, 430 L. That's like a Toyota.\n\n2\n00:00:07,319 --> 00:00:09,019\nIt's a Lexus.\n\n"};
     res.json(data);
   } catch (error) {
     res.status(500).json({ error: "Failed to read response file" });
